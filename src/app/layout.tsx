@@ -3,14 +3,16 @@ import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - TaxPal',
-    default: 'TaxPal - Accounting made simple for small businesses',
+    template: 'Carvalho Homme à tout faire',
+    default: 'Carvalho Homme à tout faire',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'Besoin de petits travaux, de jardinage, de nettoyage ou d\'autres services ? Ne cherchez plus, contactez-moi dès maintenant !',
 }
 
 const inter = Inter({
@@ -39,7 +41,11 @@ export default function RootLayout({
         lexend.variable,
       )}
     >
-      <body className="flex h-full flex-col">{children}</body>
+      <body className="flex h-full flex-col">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
