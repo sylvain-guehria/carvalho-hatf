@@ -11,8 +11,9 @@ import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import Image from 'next/image'
+import logo from '@/images/logo.jpg'
 
 function MobileNavLink({
   href,
@@ -86,7 +87,13 @@ export function Header() {
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="#" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+            <Image
+            src={logo}
+            alt=""
+            unoptimized
+            width={50}
+            height={50}
+          />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#features">Contact</NavLink>
@@ -94,7 +101,7 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <Button href="/contact" color="blue">
+            <Button href="/contact" className='bg-gradient-to-r from-red-500 to-orange-500'>
                 Demander un devis
             </Button>
             <div className="-mr-1 md:hidden">
