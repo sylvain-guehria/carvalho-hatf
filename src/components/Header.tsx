@@ -13,7 +13,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { NavLink } from '@/components/NavLink'
 import Image from 'next/image'
-import logo from '@/images/logo.jpg'
+import logo from '@/images/logo-men-only-nobg.png'
 
 function MobileNavLink({
   href,
