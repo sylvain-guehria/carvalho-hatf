@@ -9,123 +9,7 @@ import { IService, services } from '@/constants/my-services'
 
 
 
-function Service({
-  service,
-  isActive,
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<'div'> & {
-  service: IService
-  isActive: boolean
-}) {
-  return (
-    <div
-      className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
-      {...props}
-    >
-      <div
-        className={clsx(
-          'w-9 rounded-lg',
-          isActive ? 'bg-orange-600' : 'bg-slate-500',
-        )}
-      >
-        <div aria-hidden="true" className="h-9 w-9" >
-          <service.icon />
-        </div>
-      </div>
-      <h3
-        className={clsx(
-          'mt-6 text-sm font-medium',
-          isActive ? 'text-orange-600' : 'text-slate-600',
-        )}
-      >
-        {service.name}
-      </h3>
-      <p className="mt-2 font-display text-xl text-slate-900">
-        {service.summary}
-      </p>
-      <p className="mt-4 text-sm text-slate-600">{service.description}</p>
-    </div>
-  )
-}
 
-function ServicesMobile() {
-  return (
-    <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
-      {services.map((service) => (
-        <div key={service.summary}>
-          <Service service={service} className="mx-auto max-w-2xl" isActive />
-          <div className="relative mt-10 pb-10">
-            <div className="absolute -inset-x-4 bottom-0 top-8 bg-slate-200 sm:-inset-x-6" />
-            <div className="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-              <Image
-                className="w-full"
-                src={service.image}
-                alt=""
-                sizes="52.75rem"
-              />
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  )
-}
-
-function ServicesDesktop() {
-  return (
-    <TabGroup className="hidden lg:mt-20 lg:block">
-      {({ selectedIndex }) => (
-        <>
-          <TabList className="grid grid-cols-4 gap-x-8">
-            {services.map((service, serviceIndex) => (
-              <Service
-                key={service.summary}
-                service={{
-                  ...service,
-                  name: (
-                    <Tab className="ui-not-focus-visible:outline-none">
-                      <span className="absolute inset-0" />
-                      {service.name}
-                    </Tab>
-                  ),
-                }}
-                isActive={serviceIndex === selectedIndex}
-                className="relative"
-              />
-            ))}
-          </TabList>
-          <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-slate-200 px-14 py-16 xl:px-16">
-            <div className="-mx-5 flex">
-              {services.map((service, serviceIndex) => (
-                <TabPanel
-                  static
-                  key={service.summary}
-                  className={clsx(
-                    'px-5 transition duration-500 ease-in-out ui-not-focus-visible:outline-none',
-                    serviceIndex !== selectedIndex && 'opacity-60',
-                  )}
-                  style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
-                  aria-hidden={serviceIndex !== selectedIndex}
-                >
-                  <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-                    <Image
-                      className="w-full"
-                      src={service.image}
-                      alt=""
-                      sizes="52.75rem"
-                    />
-                  </div>
-                </TabPanel>
-              ))}
-            </div>
-            <div className="pointer-events-none absolute inset-0 rounded-4xl ring-1 ring-inset ring-slate-900/10" />
-          </TabPanels>
-        </>
-      )}
-    </TabGroup>
-  )
-}
 
 export function MyServices() {
   return (
@@ -135,16 +19,55 @@ export function MyServices() {
       className="pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
     >
       <Container>
-        <div className="mx-auto max-w-2xl md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Mes services.
-          </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Tarif sur demande et <span className='font-bold	'>devis gratuit </span>! Possibilité de  <span className='font-bold	'>crédit d&apos;impôt</span>  sur les services à la personne.
-          </p>
+      <div className="border-[0.5px] border-gray-200 divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
+      {services.map((service, serviceIdx) => (
+        <div
+          key={service.name}
+          className={clsx(
+            serviceIdx === 0 ? 'rounded-tl-lg rounded-tr-lg sm:rounded-tr-none' : '',
+            serviceIdx === 1 ? 'sm:rounded-tr-lg' : '',
+            serviceIdx === services.length - 2 ? 'sm:rounded-bl-lg' : '',
+            serviceIdx === services.length - 1 ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none' : '',
+            'group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500',
+          )}
+        >
+          <div>
+            <span
+              className={clsx(
+                service.iconBackground,
+                service.iconForeground,
+                'inline-flex rounded-lg p-3 ring-4 ring-white',
+              )}
+            >
+              <service.icon aria-hidden="true" className="h-6 w-6" />
+            </span>
+          </div>
+          <div className="mt-8">
+            <h3 className="text-base font-semibold leading-6 text-gray-900">
+              <a href={service.href} className="focus:outline-none">
+                {/* Extend touch target to entire panel */}
+                <span aria-hidden="true" className="absolute inset-0" />
+                {service.name}
+              </a>
+            </h3>
+            <p className="mt-2 text-sm text-gray-500">
+            {service.description}
+            </p>
+            <p className="mt-2 text-sm text-gray-500">
+            {service.summary}
+            </p>
+          </div>
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute right-6 top-6 text-gray-300 group-hover:text-gray-400"
+          >
+            <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6">
+              <path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z" />
+            </svg>
+          </span>
         </div>
-        <ServicesMobile />
-        <ServicesDesktop />
+      ))}
+    </div>
       </Container>
     </section>
   )
