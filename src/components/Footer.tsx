@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { NavLink } from '@/components/NavLink'
+import { routes } from '@/route'
 
 export function Footer() {
   return (
@@ -12,9 +13,9 @@ export function Footer() {
           <div className="py-16">
           <nav className="text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="/">Accueil</NavLink>
-              <NavLink href="/contact">Contact</NavLink>
-              <NavLink href="/galerie-photo">Galerie Photo</NavLink>
+              <NavLink href={routes.home.path}>{routes.home.label}</NavLink>
+              <NavLink href={routes.contact.path}>{routes.contact.label}</NavLink>
+              <NavLink href={routes.galeriePhoto.path}>{routes.galeriePhoto.label}</NavLink>
             </div>
           </nav>
         </div>

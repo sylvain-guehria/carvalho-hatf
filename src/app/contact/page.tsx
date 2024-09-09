@@ -39,7 +39,7 @@ export default function PageContact() {
               Chambéry et ses alentours (jusq´à 30 km).
             </p>
           </div>
-          <div className="grid grid-cols-1">
+          <div className="grid grid-cols-1 rounded-2xl overflow-hidden">
           <Image
             src={chamberyImage}
             alt=""

@@ -14,6 +14,8 @@ import { Container } from '@/components/Container'
 import { NavLink } from '@/components/NavLink'
 import Image from 'next/image'
 import logo from '@/images/logo-men-only-nobg.png'
+import { AskDevisButton } from './AskDevisButton'
+import { routes } from '@/route'
 
 function MobileNavLink({
   href,
@@ -73,8 +75,8 @@ function MobileNavigation() {
         transition
         className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in"
       >
-        <MobileNavLink href="#contact">Contact</MobileNavLink>
-        <MobileNavLink href="#galerie-photo">Galerie photo</MobileNavLink>
+        <MobileNavLink href={routes.contact.path}>{routes.contact.label}</MobileNavLink>
+        <MobileNavLink href={routes.galeriePhoto.path}>{routes.galeriePhoto.label}</MobileNavLink>
       </PopoverPanel>
     </Popover>
   )
@@ -86,24 +88,16 @@ export function Header() {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
-            <Image
-            src={logo}
-            alt=""
-            unoptimized
-            width={50}
-            height={50}
-          />
+            <Link href="/" aria-label="Home">
+              <Image src={logo} alt="" unoptimized width={50} height={50} />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#contact">Contact</NavLink>
-              <NavLink href="#galerie-photo">Galerie photo</NavLink>
+              <NavLink href={routes.contact.path}>{routes.contact.label}</NavLink>
+              <NavLink href={routes.galeriePhoto.path}>{routes.galeriePhoto.label}</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <Button href="/contact" className='bg-gradient-to-r from-red-500 to-orange-500'>
-                Demander un devis
-            </Button>
+            <AskDevisButton />
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
