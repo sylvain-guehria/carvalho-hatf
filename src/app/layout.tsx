@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: 'Carvalho Homme à tout faire',
   },
   description:
-    'Besoin de petits travaux, de jardinage, de nettoyage ou d\'autres services ? Ne cherchez plus, contactez-moi dès maintenant !',
+    'Découvrez mes services : petit travaux, jardinage, nettoyage et autres services sur mesure. Je suis à votre disposition pour vous simplifier la vie. Demandez un devis gratuit !',
 }
 
 const inter = Inter({
