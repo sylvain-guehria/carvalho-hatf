@@ -36,7 +36,7 @@ export default function PageContact() {
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">Localisation</h2>
             <p className="mt-4 leading-7 text-gray-600">
-              Chambéry et ses alentours (jusq´à 30 km).
+              Chambéry et ses alentours (jusqu´à 30 km).
             </p>
           </div>
           <div className="grid grid-cols-1 rounded-2xl overflow-hidden">

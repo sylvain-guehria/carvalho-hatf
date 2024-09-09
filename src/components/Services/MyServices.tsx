@@ -9,7 +9,7 @@ export function MyServices() {
   return (
     <section
       id="services"
-      aria-label="Services for simplifying everyday business tasks"
+      aria-label="Services proposés"
       className="pb-14 pt-20 md:pb-20 md:pt-32 lg:pb-32"
     >
       <Container>

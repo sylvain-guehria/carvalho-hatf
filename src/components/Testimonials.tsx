@@ -75,7 +75,16 @@ export function Testimonials() {
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
             Vous aussi, vous pouvez laisser votre avis sur mes services en vous
-            rendant sur ma page Google My Business.
+            rendant sur{' '}
+            <a
+              href="https://g.co/kgs/TcmA6Dr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-500"
+            >
+              ma page Google My Business
+            </a>
+            .
           </p>
         </div>
         <ul

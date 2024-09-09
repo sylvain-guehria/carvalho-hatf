@@ -23,11 +23,11 @@ export const services: Array<IService> = [
       {
         name: 'Petite plomberie',
         description:
-          'remplacement d´equipement (robinet, chasse d´eau, machine à laver...), débouchage de canalisation, changement de joint...',
+          'Remplacement d´equipement (robinet, chasse d´eau, machine à laver...), débouchage de canalisation, changement de joint...',
       },
       {
         name: 'Petite électricité',
-        description: 'remplacement d´interrupteur, prise, luminaire, electroménagé ...',
+        description: 'Remplacement d´interrupteur, prise, luminaire, electroménagé ...',
       },
       {
         name: 'Mur et sol',
@@ -35,7 +35,7 @@ export const services: Array<IService> = [
       },
       {
         name: 'Petit bricolage',
-        description: 'montage de meuble, fixation d´étagère, pose de tringle à rideaux...',
+        description: 'Montage de meuble, fixation d´étagère, pose de tringle à rideaux...',
       }
     ],
     icon: HammerIcon,
@@ -63,19 +63,19 @@ export const services: Array<IService> = [
     tasks: [
       {
         name: "Terrasse (bois, carrelage, béton...)",
-        description: "nettoyage haute pression, désherbage, traitement anti-mousse...",
+        description: "Nettoyage haute pression, désherbage, traitement anti-mousse...",
       },
       {
         name: "Véhicule",
-        description: "nettoyage intérieur et extérieur, polissage, lustrage...",
+        description: "Nettoyage intérieur et extérieur, polissage, lustrage...",
       },
       {
         name: "Canapé, tapis, moquette",
-        description: "nettoyage à sec, nettoyage à l´eau, nettoyage vapeur...",
+        description: "Nettoyage à sec, nettoyage à l´eau, nettoyage vapeur...",
       },
       {
         name: "Autre",
-        description: "nettoyage de vitre, nettoyage de gouttière, nettoyage de garage...",
+        description: "Nettoyage de vitre, nettoyage de gouttière, nettoyage de garage...",
       }
     ],
     icon: SprayCanIcon,
