@@ -9,7 +9,7 @@ export default function PageContact() {
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">Me contacter</h2>
             <p className="mt-4 leading-7 text-gray-600">
-              Demande de devis, renseignements, ou simplement être rappelé, n&apos;hésitez pas à me contacter.
+              Demande de devis gratuit, renseignements, ou simplement être rappelé, n&apos;hésitez pas à me contacter.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">

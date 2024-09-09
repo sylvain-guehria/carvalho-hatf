@@ -9,7 +9,6 @@ import {
 } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { NavLink } from '@/components/NavLink'
 import Image from 'next/image'
@@ -75,8 +74,15 @@ function MobileNavigation() {
         transition
         className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in"
       >
-        <MobileNavLink href={routes.contact.path}>{routes.contact.label}</MobileNavLink>
-        <MobileNavLink href={routes.galeriePhoto.path}>{routes.galeriePhoto.label}</MobileNavLink>
+        <MobileNavLink href={routes.home.path}>
+          {routes.home.label}
+        </MobileNavLink>
+        <MobileNavLink href={routes.contact.path}>
+          {routes.contact.label}
+        </MobileNavLink>
+        <MobileNavLink href={routes.galeriePhoto.path}>
+          {routes.galeriePhoto.label}
+        </MobileNavLink>
       </PopoverPanel>
     </Popover>
   )
@@ -92,8 +98,13 @@ export function Header() {
               <Image src={logo} alt="" unoptimized width={50} height={50} />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href={routes.contact.path}>{routes.contact.label}</NavLink>
-              <NavLink href={routes.galeriePhoto.path}>{routes.galeriePhoto.label}</NavLink>
+              <NavLink href={routes.home.path}>{routes.home.label}</NavLink>
+              <NavLink href={routes.contact.path}>
+                {routes.contact.label}
+              </NavLink>
+              <NavLink href={routes.galeriePhoto.path}>
+                {routes.galeriePhoto.label}
+              </NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">

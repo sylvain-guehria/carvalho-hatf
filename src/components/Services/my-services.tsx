@@ -7,9 +7,10 @@ import {
 
 export interface IService {
   name: string
-  href: string
-  summary: string
-  description: string
+  tasks: {
+    name: string
+    description?: string
+  }[]
   icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
   iconForeground: string
   iconBackground: string
@@ -18,44 +19,89 @@ export interface IService {
 export const services: Array<IService> = [
   {
     name: 'Petit travaux',
-    href: '#',
-    summary: 'Petite plomberie et petite électricité (Remplacement robinet, lavabo, toilet, machine à laver...).',
-    description:
-      'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
+    tasks: [
+      {
+        name: 'Petite plomberie',
+        description:
+          'remplacement d´equipement (robinet, chasse d´eau, machine à laver...), débouchage de canalisation, changement de joint...',
+      },
+      {
+        name: 'Petite électricité',
+        description: 'remplacement d´interrupteur, prise, luminaire, electroménagé ...',
+      },
+      {
+        name: 'Mur et sol',
+        description: 'Peinture, tapisserie, revêtement de sol légers, platerie légère...',
+      },
+      {
+        name: 'Petit bricolage',
+        description: 'montage de meuble, fixation d´étagère, pose de tringle à rideaux...',
+      }
+    ],
     icon: HammerIcon,
     iconForeground: 'text-purple-700',
     iconBackground: 'bg-purple-50',
   },
   {
     name: 'Jardinage',
-    href: '#',
-    summary:
-      'Never lose track of what’s in stock with accurate inventory tracking.',
-    description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
     icon: TreesIcon,
-
+    tasks: [
+      {
+        name: 'Entretien espace vert et jardin',
+        description: 'Tonte de pelouse, taille de haie, désherbage, ramassage de feuilles...',
+      },
+      {
+        name: 'Petit aménagement',
+        description: 'Plantation, pose de clôture, installation de système d´arrosage...',
+      }
+    ],
     iconForeground: 'text-teal-700',
     iconBackground: 'bg-teal-50',
   },
   {
     name: 'Nettoyage',
-    href: '#',
-    summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
-    description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+    tasks: [
+      {
+        name: "Terrasse (bois, carrelage, béton...)",
+        description: "nettoyage haute pression, désherbage, traitement anti-mousse...",
+      },
+      {
+        name: "Véhicule",
+        description: "nettoyage intérieur et extérieur, polissage, lustrage...",
+      },
+      {
+        name: "Canapé, tapis, moquette",
+        description: "nettoyage à sec, nettoyage à l´eau, nettoyage vapeur...",
+      },
+      {
+        name: "Autre",
+        description: "nettoyage de vitre, nettoyage de gouttière, nettoyage de garage...",
+      }
+    ],
     icon: SprayCanIcon,
     iconForeground: 'text-sky-700',
     iconBackground: 'bg-sky-50',
   },
   {
     name: 'Autre Services',
-    href: '#',
-    summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
-    description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+    tasks: [
+      {
+        name: 'Concièrgerie',
+        description: 'Gestion des clés, réception de colis, arrosage de plante...',
+      },
+      {
+        name: 'Gardiennage',
+        description: 'Surveillance de domicile, garde d´animaux ...',
+      },
+      {
+        name: 'Aide aux déménagement avec camion',
+        description: 'Aide au chargement et déchargement de camion, transport de meuble...',
+      },
+      {
+        name: 'Autre services',
+        description: 'Sur demande...',
+      }
+    ],
     icon: KeySquareIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
