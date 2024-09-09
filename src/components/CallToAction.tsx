@@ -17,7 +17,7 @@ export function CallToAction() {
           <p className="mt-4 text-lg tracking-tight text-white">
           Laissez un professionnel s&apos;occuper de vos tâches et travaux en tout genre.
           </p>
-          <Button href="/register" color="white" className="mt-10">
+          <Button href="/contact" color="white" className="mt-10">
             Demander un renseignement
           </Button>
         </div>

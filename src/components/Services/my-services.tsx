@@ -19,7 +19,7 @@ export const services: Array<IService> = [
   {
     name: 'Petit travaux',
     href: '#',
-    summary: 'Stay on top of things with always up-to-date reporting features.',
+    summary: 'Petite plomberie et petite électricité (Remplacement robinet, lavabo, toilet, machine à laver...).',
     description:
       'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
     icon: HammerIcon,

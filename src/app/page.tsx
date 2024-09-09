@@ -3,7 +3,7 @@ import { Faqs } from '@/components/Faqs'
 import { Hero } from '@/components/Hero'
 import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
-import { MyServices } from '@/components/MyServices'
+import { MyServices } from '@/components/Services/MyServices'
 import { Testimonials } from '@/components/Testimonials'
 
 export default function Home() {
