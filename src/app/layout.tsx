@@ -7,12 +7,9 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: {
-    template: 'Carvalho Homme à tout faire',
-    default: 'Carvalho Homme à tout faire',
-  },
+  title: 'Carvalho Homme à tout faire, Chambéry, Savoie 73',
   description:
-    'Découvrez mes services : petit travaux, jardinage, nettoyage et autres services sur mesure. Je suis à votre disposition pour vous simplifier la vie. Demandez un devis gratuit !',
+    'Découvrez mes services sur chambéry et alentours: petit travaux, jardinage, nettoyage et autres services sur mesure. Demandez un devis gratuit !',
 }
 
 const inter = Inter({

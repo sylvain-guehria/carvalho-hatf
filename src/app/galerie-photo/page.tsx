@@ -1,69 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-const products = [
-  {
-    id: 1,
-    name: 'Peintures et sol',
-    description: 'blablabla',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg',
-    imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
-  },
-  {
-    id: 2,
-    name: 'robinets et lavabos',
-    description: 'blablabla',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-02.jpg',
-    imageAlt: 'Paper card sitting upright in walnut card holder on desk.',
-  },
-  {
-    id: 3,
-    name: 'Truc et machins',
-    description: 'blablabla',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-03.jpg',
-    imageAlt: 'Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop.',
-  },
-  {
-    id: 4,
-    name: 'Focus Paper Refill',
-    description: 'blablabla',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg',
-    imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
-  },
-  {
-    id: 5,
-    name: 'Focus Card Holder',
-    description: 'blablabla',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-02.jpg',
-    imageAlt: 'Paper card sitting upright in walnut card holder on desk.',
-  },
-  {
-    id: 6,
-    name: 'Focus Carry Case',
-    description: 'blablabla',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-03.jpg',
-    imageAlt: 'Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop.',
-  },
-  {
-    id: 7,
-    name: 'Focus Paper Refill',
-    description: 'blablabla',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg',
-    imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
-  },
-  {
-    id: 8,
-    name: 'Focus Card Holder',
-    description: 'blablabla',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-02.jpg',
-    imageAlt: 'Paper card sitting upright in walnut card holder on desk.',
-  },
-  {
-    id: 9,
-    name: 'Focus Carry Case',
-    description: 'blablabla',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-03.jpg',
-    imageAlt: 'Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop.',
-  },
-]
+import { Metadata } from "next"
+import { products } from "./photoMap"
+
+
+
+export const metadata: Metadata = {
+  title: 'Galerie photo, Carvalho Homme à tout faire, Chambéry',
+  description: "Découvrez les photos de mes réalisations de travaux, jardinage, nettoyage et autres services sur mesure. Demandez un devis gratuit !",
+}
 
 export default function PageGaleriPhoto() {
   return (
