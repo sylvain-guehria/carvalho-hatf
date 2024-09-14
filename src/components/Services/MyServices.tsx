@@ -61,7 +61,7 @@ export function MyServices() {
                   {service.tasks.map((task) => (
                     <>
                       <li className="ml-5 mt-2 text-sm text-gray-500">
-                        {task.name} :
+                        {task.name} {task.description ? ':' : ''}
                       </li>
                       <p className="mt-2 text-sm text-gray-500">
                         {task.description}

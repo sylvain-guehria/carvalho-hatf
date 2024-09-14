@@ -23,7 +23,7 @@ export const services: Array<IService> = [
       {
         name: 'Petite plomberie',
         description:
-          'Remplacement d´equipement (robinet, chasse d´eau, machine à laver...), débouchage de canalisation, changement de joint...',
+          'Remplacement d´equipement (robinet, WC, chasse d´eau, machine à laver...), débouchage de canalisation, changement de joint...',
       },
       {
         name: 'Petite électricité',
@@ -48,7 +48,7 @@ export const services: Array<IService> = [
     tasks: [
       {
         name: 'Entretien espace vert et jardin',
-        description: 'Tonte de pelouse, taille de haie, désherbage, ramassage de feuilles...',
+        description: 'Tonte de pelouse, taille de haies et buissons, désherbage, ramassage de feuilles...',
       },
       {
         name: 'Petit aménagement',
@@ -63,15 +63,15 @@ export const services: Array<IService> = [
     tasks: [
       {
         name: "Terrasse (bois, carrelage, béton...)",
-        description: "Nettoyage haute pression, désherbage, traitement anti-mousse...",
+        description: "Nettoyage haute pression et alcalin, brosse hydraulique, traitement algicide fongicide et hydrofuge...",
       },
       {
         name: "Véhicule",
-        description: "Nettoyage intérieur et extérieur, polissage, lustrage...",
+        description: "Nettoyage intérieur et extérieur...",
       },
       {
-        name: "Canapé, tapis, moquette",
-        description: "Nettoyage à sec, nettoyage à l´eau, nettoyage vapeur...",
+        name: "Canapé, tapis",
+        description: "",
       },
       {
         name: "Autre",
@@ -91,11 +91,11 @@ export const services: Array<IService> = [
       },
       {
         name: 'Gardiennage',
-        description: 'Surveillance de domicile, garde d´animaux ...',
+        description: 'Surveillance de domicile, relevé de courrier...',
       },
       {
-        name: 'Aide aux déménagement avec camion',
-        description: 'Aide au chargement et déchargement de camion, transport de meuble...',
+        name: 'Aide aux déménagement',
+        description: '',
       },
       {
         name: 'Autre services',

@@ -19,7 +19,7 @@ export function PrimaryFeatures() {
           Mes services.
           </h2>
           <p className="mt-6 text-xl tracking-tight text-white">
-          Tarif sur demande et <span className='font-bold	'>devis gratuit </span>! Possibilité de  <span className='font-bold	'>crédit d&apos;impôt</span>  sur les services à la personne.
+          Tarif sur demande et <span className='font-bold	'>devis gratuit </span>! Possibilité de  <span className='font-bold	'>règlement avec CESU</span>.
           </p>
         </div>
       </Container>
