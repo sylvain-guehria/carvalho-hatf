@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import chamberyImage from '@/images/screenshots/chambery.png'
 import { Metadata } from 'next'
+import { Socials } from '@/components/Socials'
 
 export const metadata: Metadata = {
   title: 'Contact, Carvalho Homme à tout faire, Chambéry',
@@ -22,6 +23,9 @@ export default function PageContact() {
                 Demande de devis gratuit, renseignements, ou simplement être
                 rappelé, n&apos;hésitez pas à me contacter.
               </p>
+              <div className="mt-6 flex gap-4">
+              <Socials />
+              </div>
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
               <div className="rounded-2xl bg-gray-50 p-10">

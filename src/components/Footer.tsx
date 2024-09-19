@@ -1,31 +1,18 @@
-import Link from 'next/link'
-
-import { Container } from '@/components/Container'
-import { NavLink } from '@/components/NavLink'
-import { routes } from '@/route'
+import { Socials } from './Socials'
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50">
-      <Container>
-        <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
-          <div className="flex gap-x-6">
-          <div className="py-16">
-          <nav className="text-sm" aria-label="quick links">
-            <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href={routes.home.path}>{routes.home.label}</NavLink>
-              <NavLink href={routes.contact.path}>{routes.contact.label}</NavLink>
-              <NavLink href={routes.galeriePhoto.path}>{routes.galeriePhoto.label}</NavLink>
-            </div>
-          </nav>
+    <footer className="bg-white">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+        <div className="flex justify-center space-x-6 md:order-2">
+          <Socials />
         </div>
-          </div>
-          <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} Carvalho-HATF. All rights
-            reserved.
+        <div className="mt-8 md:order-1 md:mt-0">
+          <p className="text-center text-xs leading-5 text-gray-500">
+            &copy; 2024 Carvalho-hatf, Inc. All rights reserved.
           </p>
         </div>
-      </Container>
+      </div>
     </footer>
   )
 }
