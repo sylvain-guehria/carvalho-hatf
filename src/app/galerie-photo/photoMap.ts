@@ -1,9 +1,37 @@
 export const products = [
   {
     id: 1,
-    name: 'Photo à venir',
+    name: 'Pose de parket',
     description: '',
-    imageSrc: 'https://images.unsplash.com/photo-1728144691773-544f5c5577f6?q=80&w=2962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageSrc: '/images/galerie/image11.jpeg',
+    imageAlt: 'Photo a venir',
+  },
+  {
+    id: 2,
+    name: 'Nettoyage de terrasse',
+    description: '',
+    imageSrc: '/images/galerie/image17.jpeg',
+    imageAlt: 'Photo a venir',
+  },
+  {
+    id: 3,
+    name: 'Pose de papier peint',
+    description: '',
+    imageSrc: '/images/galerie/image10.png',
+    imageAlt: 'Photo a venir',
+  },
+  {
+    id: 4,
+    name: 'Nettoyage de façade',
+    description: '',
+    imageSrc: '/images/galerie/image1.png',
+    imageAlt: 'Photo a venir',
+  },
+  {
+    id: 4,
+    name: 'Nettoyage et vernissage de porte',
+    description: '',
+    imageSrc: '/images/galerie/image14.jpeg',
     imageAlt: 'Photo a venir',
   },
 ]
