@@ -1,6 +1,7 @@
 import { type Metadata } from 'next'
 import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import '@/styles/tailwind.css'
 import { Header } from '@/components/Header'
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body className="flex h-full flex-col">
         <Header />
         {children}
+        <SpeedInsights/>
         <Footer />
       </body>
     </html>
